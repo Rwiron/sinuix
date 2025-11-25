@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -60,6 +61,7 @@ const App: React.FC = () => {
       <Footer />
       {/* ChatWidget disabled - requires GEMINI_API_KEY environment variable */}
       {/* <ChatWidget /> */}
+      <Analytics />
     </div>
   );
 };
