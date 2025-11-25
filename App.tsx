@@ -37,16 +37,16 @@ const App: React.FC = () => {
 
   return (
     <div className="font-sans antialiased text-siunex-dark selection:bg-siunex-gold selection:text-white bg-siunex-base">
-      
+
       {selectedProject ? (
-        <ProjectDetail 
-          project={selectedProject} 
-          onBack={() => setSelectedProject(null)} 
+        <ProjectDetail
+          project={selectedProject}
+          onBack={() => setSelectedProject(null)}
         />
       ) : (
         <>
           <Navbar activeSection={activeSection} scrollToSection={scrollToSection} />
-          
+
           <main>
             <Hero scrollToSection={scrollToSection} />
             <About />
@@ -58,7 +58,8 @@ const App: React.FC = () => {
       )}
 
       <Footer />
-      <ChatWidget />
+      {/* ChatWidget disabled - requires GEMINI_API_KEY environment variable */}
+      {/* <ChatWidget /> */}
     </div>
   );
 };
